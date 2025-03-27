@@ -1,4 +1,34 @@
+import ShopCard from "../components/shopCard";
+import { card } from "../lib/types"; // Adjust the import path as needed
 const ShopSection = () => {
+  const shop: card[] = [
+    {
+      id: 1,
+      name: "Group trainings",
+      desc: "Tincidunt felis, suspendisse euismod eget. Aliquam in quis tempus.",
+      image: "/images/stretch.jpeg",
+      sessions: 7,
+      price: 49.0,
+      oldPrice: 60.0,
+    },
+    {
+      id: 2,
+      name: "PRIVATE TRAINING",
+      desc: "Lectus volutpat, pulvinar diam non eu in et ut. A enim dignissim.",
+      image: "/images/trainImage.jpeg",
+      sessions: 5,
+      price: 79.0,
+    },
+    {
+      id: 3,
+      name: "MEMBERSHIP",
+      desc: "Adipiscing arcu ut ut dictum. Eget diam lacus egestas diam.",
+      image: "/images/restImage.jpeg",
+      sessions: 20,
+      price: 99.0,
+    },
+  ];
+
   return (
     <section className="bg-black py-16 px-4 border-b-[0.1px] border-gray-400 ">
       {/* Header */}
@@ -20,103 +50,26 @@ const ShopSection = () => {
         <div className="flex flex-col md:flex-row items-start md:justify-between border border-gray-800 p-4 mb-8">
           <div className="text-gray-400">CATEGORIES:</div>
           <div className="flex flex-col md:flex-row md:gap-4 ">
-            <button className="font-semibold hover:text-yellow-400 text-white">ALL</button>
-            <button className="font-semibold hover:text-yellow-400 text-gray-400">GROUP TRAININGS</button>
-            <button className="font-semibold hover:text-yellow-400 text-gray-400">PRIVATE TRAINING</button>
-            <button className="font-semibold hover:text-yellow-400 text-gray-400">MEMBERSHIP</button>
+            <button className="font-semibold hover:text-yellow-400 text-white">
+              ALL
+            </button>
+            <button className="font-semibold hover:text-yellow-400 text-gray-400">
+              GROUP TRAININGS
+            </button>
+            <button className="font-semibold hover:text-yellow-400 text-gray-400">
+              PRIVATE TRAINING
+            </button>
+            <button className="font-semibold hover:text-yellow-400 text-gray-400">
+              MEMBERSHIP
+            </button>
           </div>
         </div>
 
         {/* Pricing Cards */}
         <div className="flex flex-wrap -mx-4">
-          {/* Card 1 */}
-          <div className="w-full md:w-1/3 px-4 mb-8">
-            <div className="border border-gray-800 h-full">
-              <img
-                src="/images/stretch.jpeg"
-                alt="Group Training"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-white text-xl font-bold mb-2">
-                  GROUP TRAININGS
-                </h3>
-                <div className="flex items-baseline mb-4">
-                  <span className="text-yellow-500 text-xl font-bold">
-                    $ 49.00 USD
-                  </span>
-                  <span className="text-gray-500 ml-2 line-through">
-                    $ 60.00 USD
-                  </span>
-                  <span className="text-gray-400 ml-2">7 sessions</span>
-                </div>
-                <p className="text-gray-400 text-sm mb-6">
-                  Tincidunt felis, suspendisse euismod eget. Aliquam in quis
-                  tempus.
-                </p>
-                <button className="border border-white text-white px-4 py-2 hover:bg-white hover:text-black transition-colors">
-                  ADD TO CART
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="w-full md:w-1/3 px-4 mb-8">
-            <div className="border border-gray-800 h-full">
-              <img
-                src="/images/trainImage.jpeg"
-                alt="Private Training"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-white text-xl font-bold mb-2">
-                  PRIVATE TRAINING
-                </h3>
-                <div className="flex items-baseline mb-4">
-                  <span className="text-yellow-500 text-xl font-bold">
-                    $ 79.00 USD
-                  </span>
-                  <span className="text-gray-400 ml-2">5 sessions</span>
-                </div>
-                <p className="text-gray-400 text-sm mb-6">
-                  Lectus volutpat, pulvinar diam non eu in et ut. A enim
-                  dignissim.
-                </p>
-                <button className="border border-white text-white px-4 py-2 hover:bg-white hover:text-black transition-colors">
-                  ADD TO CART
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="w-full md:w-1/3 px-4 mb-8">
-            <div className="border border-gray-800 h-full">
-              <img
-                src="/images/restImage.jpeg"
-                alt="Membership"
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-white text-xl font-bold mb-2">
-                  MEMBERSHIP
-                </h3>
-                <div className="flex items-baseline mb-4">
-                  <span className="text-yellow-500 text-xl font-bold">
-                    $ 99.00 USD
-                  </span>
-                  <span className="text-gray-400 ml-2">per month</span>
-                </div>
-                <p className="text-gray-400 text-sm mb-6">
-                  Adipiscing arcu ut ut dictum. Eget diam lacus egestas diam.
-                </p>
-                <button className="border border-white text-white px-4 py-2 hover:bg-white hover:text-black transition-colors">
-                  ADD TO CART
-                </button>
-              </div>
-            </div>
-          </div>
+          {shop.map((shop) => (
+            <ShopCard shop={shop} key={shop.id} />
+          ))}
         </div>
       </div>
     </section>
