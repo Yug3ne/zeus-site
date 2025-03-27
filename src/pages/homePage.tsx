@@ -9,7 +9,7 @@ import ShopSection from "../sections/shopSection";
 
 const HomePage = () => {
   return (
-    <section className="flex flex-col main">
+    <section className="flex w-full flex-col">
       <HeroSection />
       <AboutSection />
       <ServiceSection />

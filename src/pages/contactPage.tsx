@@ -5,9 +5,9 @@ const ContactPage = () => {
     <section className="bg-black py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
-        <div className="flex gap-2 mt-8 text-4xl font-bold italic mb-16">
-          <span className="text-white text-5xl">CONTACT</span>{" "}
-          <span className="text-yellow-500 text-5xl">ZEUS</span>
+        <div className="flex gap-2 mt-8  font-bold italic mb-16">
+          <span className="text-white text-3xl md:text-5xl">CONTACT</span>{" "}
+          <span className="text-yellow-500 text-3xl md:text-5xl">ZEUS</span>
         </div>
 
         {/* Map Image */}

@@ -1,6 +1,6 @@
 const LocationSection = () => {
   return (
-    <section className="bg-black py-16 px-4 border-b-[0.1px] border-gray-400">
+    <section className="bg-black py-16  border-b-[0.1px] border-gray-400  ">
       <div className="flex flex-col md:flex-row max-w-6xl mx-auto">
         {/* Map Image */}
         <div className="w-full md:w-1/2 mb-8 md:mb-0">
@@ -12,7 +12,7 @@ const LocationSection = () => {
         </div>
 
         {/* Location Info */}
-        <div className="w-full h-[700px] md:w-1/2 md:pl-12">
+        <div className="w-full md:h-[700px] md:w-1/2 md:pl-12">
           <div className="flex items-center">
             <div className="w-8 h-0.5 bg-yellow-500 mr-3"></div>
             <span className="text-yellow-500 font-medium tracking-wide">

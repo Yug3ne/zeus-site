@@ -2,11 +2,11 @@ import { Link } from "react-router";
 
 const AboutSection = () => {
   return (
-    <section className="bg-black py-16 md:py-24 border-b-[0.1px] border-gray-400 mt-7">
-      <div className="container mx-auto px-4 md:px-8 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <section className="bg-black py-16 md:py-24 border-b-[0.1px] border-gray-400 ">
+
+        <div className="flex flex-col md:flex-row gap-4 md:gap-12 items-center  mx-auto px-4 md:px-8 lg:px-12">
           {/* Left Column - Text Content */}
-          <div className="space-y-6">
+          <div className="flex flex-col gap-4">
             <div className="flex items-center">
               <div className="w-8 h-0.5 bg-yellow-500 mr-3"></div>
               <span className="text-yellow-500 font-medium tracking-wide">
@@ -36,7 +36,7 @@ const AboutSection = () => {
           </div>
 
           {/* Right Column - Image */}
-          <div className="relative h-[400px] md:h-[450px] lg:h-[500px]">
+          <div className=" md:h-[450px] lg:h-[500px]">
             <img
               src="/images/stretch.jpeg"
               alt="Fitness training session"
@@ -44,7 +44,6 @@ const AboutSection = () => {
             />
           </div>
         </div>
-      </div>
     </section>
   );
 };

@@ -17,13 +17,13 @@ const ShopSection = () => {
         </h2>
 
         {/* Categories */}
-        <div className="flex justify-between border border-gray-800 p-4 mb-8">
+        <div className="flex flex-col md:flex-row items-start md:justify-between border border-gray-800 p-4 mb-8">
           <div className="text-gray-400">CATEGORIES:</div>
-          <div className="flex space-x-6">
-            <button className="text-white">ALL</button>
-            <button className="text-gray-400">GROUP TRAININGS</button>
-            <button className="text-gray-400">PRIVATE TRAINING</button>
-            <button className="text-gray-400">MEMBERSHIP</button>
+          <div className="flex flex-col md:flex-row md:gap-4 ">
+            <button className="font-semibold hover:text-yellow-400 text-white">ALL</button>
+            <button className="font-semibold hover:text-yellow-400 text-gray-400">GROUP TRAININGS</button>
+            <button className="font-semibold hover:text-yellow-400 text-gray-400">PRIVATE TRAINING</button>
+            <button className="font-semibold hover:text-yellow-400 text-gray-400">MEMBERSHIP</button>
           </div>
         </div>
 

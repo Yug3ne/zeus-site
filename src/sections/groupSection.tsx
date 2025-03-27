@@ -13,8 +13,8 @@ const GroupSection = () => {
         </h2>
       </div>
 
-      <div className="flex flex-wrap justify-center mt-16 max-w-6xl mx-auto">
-        <div className="w-1/4 flex flex-col items-center text-center px-4 border-r border-gray-800">
+      <div className="flex flex-col gap-8 md:flex-row flex-wrap justify-center mt-16 max-w-6xl mx-auto">
+        <div className="w-full md:w-1/4 flex flex-col items-center text-center px-4 border-r border-gray-800">
           <div className="w-16 h-16 relative mb-6">
             <img
               src="/icons/theRide.svg"
@@ -31,7 +31,7 @@ const GroupSection = () => {
           </p>
         </div>
 
-        <div className="w-1/4 flex flex-col items-center text-center px-4 border-r border-gray-800">
+        <div className="w-full md:w-1/4 flex flex-col items-center text-center px-4 border-r border-gray-800">
           <div className="w-16 h-16 relative mb-6">
             <img
               src="/icons/meditate.svg"
@@ -47,7 +47,7 @@ const GroupSection = () => {
           </p>
         </div>
 
-        <div className="w-1/4 flex flex-col items-center text-center px-4 border-r border-gray-800">
+        <div className="w-full md:w-1/4 flex flex-col items-center text-center px-4 border-r border-gray-800">
           <div className="w-16 h-16 relative mb-6">
             <img
               src="/icons/cardio.svg"
@@ -63,7 +63,7 @@ const GroupSection = () => {
           </p>
         </div>
 
-        <div className="w-1/4 flex flex-col items-center text-center px-4">
+        <div className="w-full md:w-1/4 flex flex-col items-center text-center px-4">
           <div className="w-16 h-16 relative mb-6">
             <img
               src="/icons/actionSports.svg"
